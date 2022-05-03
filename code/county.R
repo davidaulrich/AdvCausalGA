@@ -32,7 +32,7 @@ county <- county %>%
 #Remove any counties that reported zero crimes
 county <- county %>%
   group_by(fipsid) %>%
-  filter(!all(is.na(mur)))
+  filter(!all(is.na(ratmur)))
 
 #Assign treatment dates
 county$treat_date <- 0
